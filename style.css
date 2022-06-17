@@ -1,0 +1,150 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: goldenrod;
+    padding: 20px;
+    
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+    margin-top: 120px;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 10px;
+}
+.sedan{
+    background-color: hsl(31, 77%, 52%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26.17px;
+    font-size: 15px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    
+}
+.suv{
+    background-color: hsl(195, 2%, 40%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26.16px;
+    font-size: 15px;
+    
+}
+.luxury{
+    background-color: hsl(179, 100%, 13%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26.16px;
+    font-size: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+p{
+    font-family: "Lexend Deca";
+    font-weight: 400;
+    margin-bottom: 60px ;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 20px;
+}
+h3{
+    font-family: "Big Shoulders Display";
+    margin: 20px 0;
+    font-weight: 700;
+    color: hsl(0, 0%, 95%);
+}
+button{
+    background-color: hsl(0, 0%, 95%);
+    padding:8px 20px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 20px;
+}
+.sedan button{
+    color: hsl(31, 77%, 52%);
+}
+.suv button{
+    color: hsl(195, 2%, 40%);
+}
+.luxury button{
+    color: hsl(179, 100%, 13%);
+}
+
+/* grid */
+.gridbody{
+    background-color: navy;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas:'a a a b' 'c c d d' 'c c e e ';
+    padding:20px;
+    gap: 10px;
+    height: 520px;
+    width: 75%;
+    margin: auto;
+}
+.grid-container div{
+    padding: 50px;
+    font-size: larger;
+}
+.item1{
+    grid-area: a;
+    background-color: orangered;
+    height: 250px;
+    color: orangered;
+}
+.item2{
+    grid-area: b;
+    background-color: orange;
+    color: orange;
+}
+.item3{
+    grid-area: c;
+    background-color: green;
+    color: green;
+}
+.item4{
+    grid-area: d;
+    background-color: rgb(21, 169, 255);
+    color: rgb(21, 169, 255);
+}
+.item5{
+    grid-area: e;
+    background-color:rgb(21, 169, 255) ;
+    color: rgb(21, 169, 255);
+}
+
+@media (max-width:800px) {
+    
+    .flex-container{
+        
+        width:90%;
+    }
+    
+}
+@media (max-width:600px) {
+    
+    .flex-container{
+        flex-direction:column;
+       
+    }
+    .sedan{
+        border-top-right-radius: 5px;
+        border-bottom-left-radius:0;
+    }
+    .luxury{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px;
+    }
+    .grid-container{
+        width: 100%;
+    }
+    
+}
